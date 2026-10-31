@@ -2,7 +2,7 @@ import os, sqlite3, json, time, secrets
 from flask import Flask, g, jsonify, request, session, render_template, redirect
 from werkzeug.middleware.proxy_fix import ProxyFix
 from werkzeug.security import generate_password_hash, check_password_hash
-from integrations import ai_service, roblox_service, token_service
+from integration import ai_service, roblox_service, token_service
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 ON_VERCEL = bool(os.environ.get("VERCEL"))
