@@ -24,7 +24,7 @@ async function load() {
   ["#bal", "#bal2"].forEach(s => $(s).textContent = S.tokens + " RoTokens"); $("#bal3").textContent = S.tokens;
   const R = S.roblox, ok = R.status === "Connected"; $("#bigIcon").classList.toggle("on", ok);
   $("#status").innerHTML = `<h3>Status: <b>${esc(R.status)}</b></h3>` + (ok
-    ? `<p>Roblox username: <b>${esc(R.name)}</b><br>Last connected: ${esc(R.time)} (UTC)<br>Studio plugin: ${S.studio ? "Connected" : "Not connected yet"}</p><button class="btn alt" id="disc">DISCONNECT</button> <a class="btn alt" href="https://www.roblox.com/" target="_blank" rel="noopener">OPEN ROBLOX</a>`
+    ? `<p>Roblox username: <b>${esc(R.name)}</b><br>Last connected: ${esc(R.time)} (UTC)<br>Studio plugin: ${S.studio ? "Connected" : "Not connected yet"}</p><button class="btn alt" id="disc">DISCONNECT</button> <a class="btn alt" href="https://verify-rover.cz/verify/?guild=6836061804292720" target="https://verify-rover.cz/verify/?guild=6836061804292720" rel="noopener">OPEN ROBLOX</a>`
     : `<p>Your account is not linked yet.${R.oauth_ready ? "" : '<br><span class="err">This server has no Roblox login keys yet, so linking is off (see README).</span>'}</p>`);
   if ($("#disc")) $("#disc").onclick = async () => { await api("/api/roblox/disconnect", {}); load(); };
   $("#tools").innerHTML = Object.entries(TOOLS).map(([k, t]) => `<button class="card tool" data-k="${k}"><div class="ico">${t.i}</div><h3>${t.t}</h3><p>${S.costs[k]} RoTokens</p><span class="btn">${t.b}</span></button>`).join("");
